@@ -1,0 +1,7 @@
+*.patch
+*~
+*.tex
+*.org
+*.txt
+*.pdf
+ad_*

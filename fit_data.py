@@ -1,3 +1,7 @@
+"""
+Read data points and plot them along fitted model
+Usage: python fit_data.py data_file
+"""
 import sys
 import numpy as np
 import matplotlib.pyplot as plt

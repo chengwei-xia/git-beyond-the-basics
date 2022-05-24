@@ -5,7 +5,11 @@ from scipy.optimize import curve_fit
 from model import model
 
 filename = sys.argv[1]
-data = np.loadtxt(filename, delimiter=",", skiprows=1)
+try:
+    data = np.loadtxt(filename, delimiter=",", skiprows=1)
+except OSError:
+    raise FileNotFoundError(f"File {filename} not found")
+
 plt.plot(data[:, 0], data[:, 1], "ro")
 
 popt, pcov = curve_fit(model, data[:, 0], data[:, 1], p0=(1, 0.2))

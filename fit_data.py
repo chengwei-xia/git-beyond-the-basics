@@ -14,11 +14,12 @@ try:
 except OSError:
     raise FileNotFoundError(f"File {filename} not found")
 
-plt.plot(data[:, 0], data[:, 1], "ro")
+plt.plot(data[:, 0], data[:, 1], "ro", label="data points")
 
 popt, pcov = curve_fit(model_fun, data[:, 0], data[:, 1], p0=(1, 0.2))
 xmin = np.min(data[:, 0])
 xmax = np.max(data[:, 0])
 x = np.linspace(xmin, xmax, 50)
-plt.plot(x, model(x, *popt), "b")
+plt.plot(x, model(x, *popt), "b", label="fitted model")
+plt.legend()
 plt.show()

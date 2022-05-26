@@ -14,6 +14,7 @@ if len(sys.argv) < 2:
 
 if "--help" in sys.argv:
     print("usage: python {sys.argv[0]} file [--plot]")
+    sys.exit()
 
 filename = sys.argv[1]
 try:

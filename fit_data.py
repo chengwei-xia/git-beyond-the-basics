@@ -7,6 +7,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 from model import model
+import logging
 
 if len(sys.argv) < 2:
     raise RuntimeError("Missing filename argument")
@@ -18,6 +19,7 @@ except OSError:
     raise FileNotFoundError(f"File {filename} not found")
 
 popt, pcov = curve_fit(model, data[:, 0], data[:, 1], p0=(1, 0.2))
+logging.info("p1 = {popt[0]}, p2 = {popt[1]}")
 
 if "--plot" in sys.argv:
     plt.plot(data[:, 0], data[:, 1], "r*", label="data points")

@@ -12,6 +12,9 @@ import logging
 if len(sys.argv) < 2:
     raise RuntimeError("Missing filename argument")
 
+if "--help" in sys.argv:
+    print("usage: python {sys.argv[0]} file [--plot]")
+
 filename = sys.argv[1]
 try:
     data = np.loadtxt(filename, delimiter=",", skiprows=1)

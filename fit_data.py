@@ -14,7 +14,7 @@ try:
 except OSError:
     raise FileNotFoundError(f"File {filename} not found")
 
-plt.plot(data[:, 0], data[:, 1], "ro")
+plt.plot(data[:, 0], data[:, 1], "r*")
 
 popt, pcov = curve_fit(model, data[:, 0], data[:, 1], p0=(1, 0.2))
 xmin = np.min(data[:, 0])

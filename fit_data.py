@@ -32,4 +32,3 @@ if "--plot" in sys.argv:
     if "--save" in sys.argv:
         plt.savefig("figure.png")
     plt.show()
-    

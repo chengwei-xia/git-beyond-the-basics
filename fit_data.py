@@ -17,8 +17,6 @@ parser.add_argument("--plot", action="store_true")
 parser.add_argument("--save", action="store_true")
 args = parser.parse_args()
 
-if len(sys.argv) < 2:
-    raise RuntimeError("Missing filename argument")
 
 if "--help" in sys.argv:
     print("usage: python {sys.argv[0]} file [--plot]")

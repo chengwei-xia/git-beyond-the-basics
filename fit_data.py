@@ -19,7 +19,7 @@ if "--help" in sys.argv:
 
 
 draw_plot = True if "--plot" in sys.argv else False
-save_plot = True if "--plot" in sys.argv else False
+save_plot = True if "--save" in sys.argv else False
 if save_plot and not draw_plot:
     warn("Ignoring --save option. Use --plot to enable plotting")
 

@@ -17,11 +17,6 @@ parser.add_argument("--plot", action="store_true")
 parser.add_argument("--save", action="store_true")
 args = parser.parse_args()
 
-
-if "--help" in sys.argv:
-    print("usage: python {sys.argv[0]} file [--plot]")
-    sys.exit()
-
 if args.save and not args.plot:
     warn("Ignoring --save option. Use --plot to enable plotting")
 

@@ -29,6 +29,7 @@ if "--plot" in sys.argv:
     plt.plot(data[:, 0], data[:, 1], color="r", "*", label="data points")
     x = np.linspace(np.min(data[:, 0]), np.max(data[:, 0]), 50)
     plt.plot(x, model(x, *popt), "b", linewidth=2, label="fitted model")
-    plt.show()
     if "--save" in sys.argv:
         plt.savefig("figure.png")
+    plt.show()
+    

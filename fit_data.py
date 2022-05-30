@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 from model import model
 import logging
+####
 
 if len(sys.argv) < 2:
     raise RuntimeError("Missing filename argument")
